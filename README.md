@@ -1,16 +1,16 @@
 # github-contribution-graph
 
 過去１年間の GitHub コントリビューション数が閲覧できるグラフページを作成しました。  
-ドロップダウンで選択した月の、private/public を合わせたコントリビューション数を日にちごとに表示します。  
+ドロップダウンで選択した月の、private/public リポジトリを合わせたコントリビューション数を日にちごとに表示します。  
 自分のポートフォリオにコンポーネントとして組み込む等、ぜひご利用ください。
 
 # Deploy
 
-https://feature-1.dno0zco63j2qx.amplifyapp.com/
+https://main.dno0zco63j2qx.amplifyapp.com/
 
 # DEMO
 
-![](https://user-images.githubusercontent.com/95216275/201852835-11c1bbd7-cd90-4473-92d7-f3094c2e5ffa.gif)
+![](https://user-images.githubusercontent.com/95216275/201860834-355eed5a-7a7a-4b7a-b18d-66c6dc2cc59d.gif)  
 ドロップダウンの閲覧したい月をクリックすると  
 その月のコントリビューション数遷移グラフが表示されます。
 
@@ -71,7 +71,7 @@ yarn run dev
 
 # 各種設定ファイルの解説
 
-- .eslintrc
+- .eslintrc.json
 
   - 目的
     - eslint のルールを自動的に強制するため
@@ -81,6 +81,7 @@ yarn run dev
     - 公式の正しい書き方を確認する為
 
 - dockerfile
+
   - 目的
     - ローカル環境だけではなく、仮想環境でも正しく動くことを確認できるように docker を導入するため
   - 参考情報
@@ -89,7 +90,9 @@ yarn run dev
     - 公式の正しい書き方を確認する為
   - OS
     - alpine(v3.15)
+
 - docker-compose.yml
+
   - 目的
     - 今後開発にあたりコンテナ数が増える可能性があるため
   - 参考情報
@@ -99,14 +102,18 @@ yarn run dev
   - port
     - 3000:3000 →DockerImage を立ち上げるポート
     - 9229:9229 → デバッグ用のポート
-- prettier.json
+
+- .prettierrc
+
   - 目的
     - eslint のルールを自動的に強制するため
   - 参考情報
     - https://prettier.io/docs/en/options.html
   - 参考経緯
     - 公式の正しい書き方を確認する為
+
 - tsconfig.json
+
   - 目的
     - 型を宣言して未然にエラーを防ぐため typescript を導入
   - 参考情報
