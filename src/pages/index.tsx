@@ -24,10 +24,10 @@ const Home = ({ contributions }: HomeIn): HomeOut => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>github&nbsp;contribution</title>
+        <title>GitHub&nbsp;contribution</title>
       </Head>
       <main className={styles.main}>
-        <h1>Github&nbsp;Contribution&nbsp;Graph</h1>
+        <h1>GitHub&nbsp;Contribution&nbsp;Graph</h1>
         <ContributionsDateDropdown
           setMonth={setMonth}
         ></ContributionsDateDropdown>
