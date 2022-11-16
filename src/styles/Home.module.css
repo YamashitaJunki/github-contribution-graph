@@ -1,9 +1,67 @@
 .container {
   padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  font-size: 2vw;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.title {
+  word-break: break-word;
+  white-space: normal;
+}
+
+.dropdown {
+  background-color: rgb(234, 229, 89, 0.8);
+  color: rgb(0, 0, 0);
+  max-width: 400px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.dropdown-list {
+  position: relative;
+}
+
+.list {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+  background-color: rgb(234, 229, 89, 0.8);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+.dropdown-list:hover .list {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  list-style-type: none;
+}
+
+.each-month:hover {
+  background-color: rgba(255, 255, 255);
+  color: rgba(1, 0, 0);
+}
+
+.graph {
+  width: 100%;
+  height: 60vh;
 }
