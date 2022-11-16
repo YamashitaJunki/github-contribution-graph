@@ -1,4 +1,5 @@
 import { getOneYearDateList } from "../lib/getOneYearDateList";
+import styles from "../styles/Home.module.css";
 
 type ContributionsDateDropdownIn = {
   setMonth: React.Dispatch<React.SetStateAction<string>>;
@@ -11,13 +12,13 @@ export function ContributionsDateDropdown({
   const dateList = getOneYearDateList(nowDate);
 
   return (
-    <ul className="dropdown">
-      <li className="dropdown-list">
+    <ul className={styles.dropdown}>
+      <li className={styles["dropdown-list"]}>
         <div>Select&nbsp;month</div>
-        <ul className="list">
+        <ul className={styles.list}>
           {dateList.map((month) => {
             return (
-              <li key={month} className="each-month">
+              <li key={month} className={styles["each-month"]}>
                 <div onClick={() => setMonth(month)}>{month}</div>
               </li>
             );

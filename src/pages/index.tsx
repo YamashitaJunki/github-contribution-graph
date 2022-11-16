@@ -27,11 +27,14 @@ const Home = ({ contributions }: HomeIn): HomeOut => {
         <title>GitHub&nbsp;contribution</title>
       </Head>
       <main className={styles.main}>
-        <h1>GitHub&nbsp;Contribution&nbsp;Graph</h1>
+        <h1 className={styles.title}>
+          <div>GitHub</div>
+          <div>Contribution&nbsp;Graph</div>
+        </h1>
         <ContributionsDateDropdown
           setMonth={setMonth}
         ></ContributionsDateDropdown>
-        <div className="graph">
+        <div className={styles.graph}>
           <Line
             data={contributions.graphData[month]}
             options={contributions.options}
